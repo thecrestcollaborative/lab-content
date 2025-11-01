@@ -271,121 +271,22 @@
         </ul>
 
         <div style="margin-top: 2rem;">
-            <div style="margin-bottom: 1.5rem;">
-                <label for="client-name" style="display: block; margin-bottom: 0.5rem;"><strong>Full Name:</strong></label>
-                <input type="text" id="client-name" name="client-name" 
-                       style="width: 100%; padding: 0.75rem; border: 2px solid #E5E5E0; border-radius: 8px; font-size: 1rem; font-family: inherit;"
-                       placeholder="Enter your full name" required>
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-                <label for="client-email" style="display: block; margin-bottom: 0.5rem;"><strong>Email Address:</strong></label>
-                <input type="email" id="client-email" name="client-email" 
-                       style="width: 100%; padding: 0.75rem; border: 2px solid #E5E5E0; border-radius: 8px; font-size: 1rem; font-family: inherit;"
-                       placeholder="Enter your email address" required>
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-                <label for="client-date" style="display: block; margin-bottom: 0.5rem;"><strong>Date:</strong></label>
-                <input type="date" id="client-date" name="client-date" 
-                       style="width: 100%; padding: 0.75rem; border: 2px solid #E5E5E0; border-radius: 8px; font-size: 1rem; font-family: inherit;"
-                       required>
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-                <label style="display: flex; align-items: flex-start; cursor: pointer;">
-                    <input type="checkbox" id="electronic-signature" 
-                           style="margin-right: 0.75rem; margin-top: 0.25rem; width: 20px; height: 20px; cursor: pointer;">
-                    <span style="flex: 1;">
-                        <strong>Electronic Signature Acknowledgment:</strong> By checking this box and typing my name above, I acknowledge that this constitutes my legal electronic signature and has the same legal effect as a handwritten signature.
-                    </span>
-                </label>
-            </div>
-
-            <button type="button" id="submit-acknowledgment" class="btn" 
-                    style="background: #6B4423; color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; width: 100%;"
-                    onclick="submitAcknowledgment()">
-                Submit Acknowledgment
-            </button>
-
-            <div id="submission-message" style="display: none; margin-top: 1rem; padding: 1rem; background: #D4EDDA; border: 1px solid #C3E6CB; border-radius: 8px; color: #155724;">
-                <strong>✓ Acknowledgment Submitted Successfully</strong><br>
-                A copy has been sent to your email and recorded for our records.
-            </div>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;"><strong>To officially acknowledge this Release of Claims, please complete our secure acknowledgment form:</strong></p>
+            
+            <a href="https://forms.gle/W58FPe4GCDfjs1P48" target="_blank" 
+               style="display: inline-block; padding: 1rem 2rem; background: #6B4423; color: white; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; text-align: center; width: 100%; box-sizing: border-box;">
+                📋 Complete Acknowledgment Form
+            </a>
+            
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #6B4423; text-align: center;">
+                This will open in a new tab and takes approximately 2-3 minutes to complete.
+            </p>
         </div>
     </div>
 
-    <script>
-        // Set today's date as default
-        document.addEventListener('DOMContentLoaded', function() {
-            const dateInput = document.getElementById('client-date');
-            if (dateInput) {
-                const today = new Date().toISOString().split('T')[0];
-                dateInput.value = today;
-            }
-        });
-
-        function submitAcknowledgment() {
-            const name = document.getElementById('client-name').value.trim();
-            const email = document.getElementById('client-email').value.trim();
-            const date = document.getElementById('client-date').value;
-            const checkbox = document.getElementById('electronic-signature').checked;
-
-            // Validation
-            if (!name) {
-                alert('Please enter your full name.');
-                return;
-            }
-            if (!email) {
-                alert('Please enter your email address.');
-                return;
-            }
-            if (!date) {
-                alert('Please select a date.');
-                return;
-            }
-            if (!checkbox) {
-                alert('Please check the electronic signature acknowledgment box.');
-                return;
-            }
-
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-
-            // Here you would integrate with your form service
-            // For now, we'll show a success message and log the data
-            const formData = {
-                name: name,
-                email: email,
-                date: date,
-                timestamp: new Date().toISOString(),
-                document: 'Release of Claims and Disclaimer',
-                version: 'November 1, 2025'
-            };
-
-            console.log('Form Data:', formData);
-            
-            // Show success message
-            document.getElementById('submission-message').style.display = 'block';
-            
-            // Disable form after submission
-            document.getElementById('client-name').disabled = true;
-            document.getElementById('client-email').disabled = true;
-            document.getElementById('client-date').disabled = true;
-            document.getElementById('electronic-signature').disabled = true;
-            document.getElementById('submit-acknowledgment').disabled = true;
-            document.getElementById('submit-acknowledgment').style.opacity = '0.5';
-            document.getElementById('submit-acknowledgment').style.cursor = 'not-allowed';
-            document.getElementById('submit-acknowledgment').textContent = 'Submitted';
-
-            // Scroll to success message
-            document.getElementById('submission-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    </script>
+    <div style="margin-top: 2rem; padding: 1.5rem; background: #FFF4E6; border-left: 4px solid #6B4423; border-radius: 8px;">
+        <p style="margin: 0;"><strong>Note:</strong> If you are a new client of The CREST Collaborative's Personal HR Advisor services, you will receive this acknowledgment form via email after booking your first session.</p>
+    </div>
 
     <div class="footer-note">
         <p><strong>The CREST Collaborative</strong><br>
