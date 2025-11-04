@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal HR Advisor Pricing | CREST Collaborative</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background-color: #fff;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo h1 {
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+        
+        .logo p {
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #666;
+        }
+        
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        h2 {
+            font-size: 22px;
+            margin: 40px 0 20px 0;
+            font-weight: bold;
+        }
+        
+        .package {
+            margin-bottom: 30px;
+            border: 1px solid #E8E8E8;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .package-header {
+            background-color: #F5F5F5;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .package-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .package-price {
+            text-align: right;
+        }
+        
+        .price-amount {
+            font-size: 28px;
+            font-weight: bold;
+            color: #C9A961;
+        }
+        
+        .price-detail {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .package-description {
+            padding: 20px;
+            background-color: #fff;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .package-description em {
+            display: block;
+            margin-top: 10px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .additional-services {
+            margin-top: 40px;
+        }
+        
+        .service-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #E8E8E8;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .service-item:last-child {
+            border-bottom: none;
+        }
+        
+        .service-info {
+            flex: 1;
+        }
+        
+        .service-title {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        
+        .service-description {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .service-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #C9A961;
+            margin-left: 20px;
+            white-space: nowrap;
+        }
+        
+        .terms {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #FAFAFA;
+            border-radius: 4px;
+        }
+        
+        .terms h2 {
+            margin-top: 0;
+        }
+        
+        .terms p {
+            margin-bottom: 8px;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        
+        .terms strong {
+            font-weight: bold;
+        }
+        
+        .cta {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #F5F5F5;
+            border-radius: 4px;
+        }
+        
+        .cta h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .cta p {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .cta a {
+            color: #C9A961;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .cta a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            .cta {
+                page-break-before: avoid;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .package-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .package-price {
+                margin-top: 10px;
+                text-align: left;
+            }
+            
+            .service-item {
+                flex-direction: column;
+            }
+            
+            .service-price {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>CREST COLLABORATIVE</h1>
+            <p>Culture. Resilience. Empowerment. Solutions. Transformation.</p>
+        </div>
+        
+        <h1>Personal HR Advisor</h1>
+        <p class="subtitle">Investment in Your Career & Confidence</p>
+        
+        <h2>Service Packages</h2>
+        
+        <div class="package">
+            <div class="package-header">
+                <div class="package-title">1:1 Session</div>
+                <div class="package-price">
+                    <div class="price-amount">$250</div>
+                </div>
+            </div>
+            <div class="package-description">
+                Need an hour of advice? Set up a 1:1 session to get the guidance you need, when you need it.
+            </div>
+        </div>
+        
+        <div class="package">
+            <div class="package-header">
+                <div class="package-title">4-Session Package</div>
+                <div class="package-price">
+                    <div class="price-amount">$900</div>
+                    <div class="price-detail">Save $100</div>
+                </div>
+            </div>
+            <div class="package-description">
+                Need ongoing help? Set up four 1-hour sessions with ongoing email support Monday-Friday, 8am–5pm PST, including reviews of up to 2 documents.
+                <em>Sessions must be used within 90 days of purchase.</em>
+            </div>
+        </div>
+        
+        <div class="package">
+            <div class="package-header">
+                <div class="package-title">Monthly Retainer</div>
+                <div class="package-price">
+                    <div class="price-amount">$950</div>
+                    <div class="price-detail">per month</div>
+                </div>
+            </div>
+            <div class="package-description">
+                Dealing with a prolonged situation? Secure four weekly 1-hour sessions, text support Monday-Friday, 8am–5pm PST, and up to 4 document reviews per month.
+                <em>Auto-renews monthly. Cancel with 30 days notice.</em>
+            </div>
+        </div>
+        
+        <div class="additional-services">
+            <h2>Additional Services</h2>
+            
+            <div class="service-item">
+                <div class="service-info">
+                    <div class="service-title">Document Review Only</div>
+                    <div class="service-description">Comprehensive review of severance packages, offer letters, PIPs, or performance reviews</div>
+                </div>
+                <div class="service-price">$150</div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-info">
+                    <div class="service-title">Email Consultation</div>
+                    <div class="service-description">Detailed written response to a complex workplace question or scenario</div>
+                </div>
+                <div class="service-price">$100</div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-info">
+                    <div class="service-title">Mock Interview/Conversation Prep</div>
+                    <div class="service-description">90-minute session to prepare for critical conversations, interviews, or negotiations</div>
+                </div>
+                <div class="service-price">$300</div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-info">
+                    <div class="service-title">Custom Career Strategy Session</div>
+                    <div class="service-description">2-hour comprehensive career planning and strategy development session</div>
+                </div>
+                <div class="service-price">$400</div>
+            </div>
+        </div>
+        
+        <div class="terms">
+            <h2>Payment & Terms</h2>
+            <p><strong>Payment Methods:</strong> PayPal, Zelle, or Invoice</p>
+            <p><strong>Payment Terms:</strong> Payment due within 7 days after 1st session per invoice</p>
+            <p><strong>Rescheduling:</strong> Reschedule with 24 hours notice to avoid forfeiture</p>
+            <p><strong>Package Expiration:</strong> 4-Session Package expires 90 days from purchase date</p>
+            <p><strong>Monthly Retainer:</strong> Auto-renews monthly. Cancel with 30 days written notice</p>
+            <p><strong>Refund Policy:</strong> All payments are non-refundable but may be applied to future services</p>
+        </div>
+        
+        <div class="cta">
+            <h3>Ready to get started?</h3>
+            <p>Schedule a complimentary 15-minute pricing consultation:</p>
+            <p><a href="https://calendly.com/andreaseitz-calendar/15min" target="_blank">calendly.com/andreaseitz-calendar/15min</a></p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:info@thecrestcollaborative.com">info@thecrestcollaborative.com</a></p>
+                <p><a href="https://thecrestcollaborative.com" target="_blank">thecrestcollaborative.com</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
