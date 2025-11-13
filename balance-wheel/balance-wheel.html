@@ -127,6 +127,11 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 0;
+            }
+
             .chart-container {
                 height: 550px;
                 width: 100%;
@@ -137,6 +142,24 @@
                 padding: 20px;
                 margin: 0 auto;
                 max-width: 100%;
+                width: 100%;
+            }
+
+            .instructions {
+                padding: 20px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .saved-wheels {
+                width: 100%;
+                grid-template-columns: 1fr;
+                box-sizing: border-box;
+            }
+
+            .card, .instructions, .saved-wheels-section {
+                margin-left: 0;
+                margin-right: 0;
             }
 
             .logo {
@@ -145,10 +168,6 @@
 
             h1 {
                 font-size: 2em;
-            }
-
-            .instructions {
-                padding: 20px;
             }
 
             body {
@@ -167,6 +186,16 @@
 
             .card {
                 padding: 15px;
+                width: 100%;
+            }
+
+            .instructions {
+                padding: 15px;
+                width: 100%;
+            }
+
+            .saved-wheels {
+                width: 100%;
             }
 
             .logo {
