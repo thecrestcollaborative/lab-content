@@ -122,19 +122,25 @@
             }
 
             .chart-container {
-                height: 600px;
-                padding: 10px;
+                height: 650px;
             }
         }
 
         @media (max-width: 768px) {
             .chart-container {
-                height: 500px;
-                margin: 10px -10px;
+                height: 550px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .card {
+                padding: 20px;
+                margin: 0 auto;
+                max-width: 100%;
             }
 
             .logo {
-                max-width: 400px;
+                max-width: 80%;
             }
 
             h1 {
@@ -144,20 +150,27 @@
             .instructions {
                 padding: 20px;
             }
-        }
-
-        @media (max-width: 480px) {
-            .chart-container {
-                height: 450px;
-                margin: 10px -15px;
-            }
 
             body {
                 padding: 10px;
             }
+        }
+
+        @media (max-width: 480px) {
+            .chart-container {
+                height: 400px;
+                width: 100vw;
+                margin-left: -10px;
+                margin-right: -10px;
+                padding: 20px 5px;
+            }
 
             .card {
-                padding: 20px;
+                padding: 15px;
+            }
+
+            .logo {
+                max-width: 90%;
             }
         }
 
@@ -443,6 +456,27 @@
         footer a:hover {
             color: #2980B9;
         }
+
+        .back-to-top {
+            text-align: center;
+            margin: 40px 0 20px 0;
+        }
+
+        .back-to-top button {
+            background: #2980B9;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .back-to-top button:hover {
+            background: #21618C;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -457,10 +491,10 @@
             <h3>How to Use Your Balance Wheel</h3>
             
             <p><strong>Step 1: Name Your Wheel</strong></p>
-            <p>In the "Wheel Name" field, enter the focus area you want to assess i.e. Health.</p>
+            <p>In the "Wheel Name" field, enter the focus area you want to assess ie. Health.</p>
             
             <p><strong>Step 2: Define Your Categories</strong></p>
-            <p>Fill in the 8 category fields with specific subcategories related to your focus areas i.e. Hydration, Mental Health, etc.</p>
+            <p>Fill in the 8 category fields with specific subcategories related to your focus areas i.e. hydration, mental health, etc.</p>
             
             <p><strong>Step 3: Rate Each Category (1-10 Scale)</strong></p>
             <ul>
@@ -574,6 +608,10 @@
         </div>
     </div>
 
+    <div class="back-to-top">
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">⬆ Back to Top</button>
+    </div>
+
     <footer>
         <img src="potential-unleashed-logo.webp" alt="Potential Unleashed Consulting" style="max-width: 300px; width: 100%; height: auto; margin-bottom: 20px;">
         <p>Potential Unleashed is a business coaching company specializing in providing solutions to companies, teams, and individuals of every description through improved performance and increased human effectiveness.</p>
@@ -662,10 +700,10 @@
                     maintainAspectRatio: false,
                     layout: {
                         padding: {
-                            top: window.innerWidth < 768 ? 20 : 40,
-                            right: window.innerWidth < 768 ? 20 : 40,
-                            bottom: window.innerWidth < 768 ? 20 : 40,
-                            left: window.innerWidth < 768 ? 20 : 40
+                            top: window.innerWidth < 480 ? 10 : (window.innerWidth < 768 ? 15 : 40),
+                            right: window.innerWidth < 480 ? 10 : (window.innerWidth < 768 ? 15 : 40),
+                            bottom: window.innerWidth < 480 ? 10 : (window.innerWidth < 768 ? 15 : 40),
+                            left: window.innerWidth < 480 ? 10 : (window.innerWidth < 768 ? 15 : 40)
                         }
                     },
                     scales: {
@@ -679,7 +717,7 @@
                                 color: '#7f8c8d',
                                 backdropColor: 'transparent',
                                 font: {
-                                    size: window.innerWidth < 768 ? 10 : 11
+                                    size: window.innerWidth < 480 ? 9 : (window.innerWidth < 768 ? 10 : 11)
                                 }
                             },
                             grid: {
@@ -694,11 +732,11 @@
                             pointLabels: {
                                 color: '#2c3e50',
                                 font: {
-                                    size: window.innerWidth < 768 ? 12 : 14,
+                                    size: window.innerWidth < 480 ? 11 : (window.innerWidth < 768 ? 12 : 14),
                                     weight: 'bold',
                                     family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
                                 },
-                                padding: window.innerWidth < 768 ? 10 : 15,
+                                padding: window.innerWidth < 480 ? 8 : (window.innerWidth < 768 ? 10 : 15),
                                 centerPointLabels: false
                             }
                         }
@@ -828,7 +866,6 @@
                     <p class="date">Created: ${date}</p>
                     <p style="color: #DC7633; margin-top: 5px; font-weight: bold;">Avg Score: ${avgScore}/10</p>
                     <div class="actions">
-                        <button onclick="loadWheel(${wheel.id})">Load</button>
                         <button onclick="deleteWheel(${wheel.id})" class="secondary">Delete</button>
                     </div>
                 `;
