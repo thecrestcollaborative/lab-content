@@ -120,6 +120,45 @@
             .main-content {
                 grid-template-columns: 1fr;
             }
+
+            .chart-container {
+                height: 600px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 500px;
+                margin: 10px -10px;
+            }
+
+            .logo {
+                max-width: 400px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .instructions {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chart-container {
+                height: 450px;
+                margin: 10px -15px;
+            }
+
+            body {
+                padding: 10px;
+            }
+
+            .card {
+                padding: 20px;
+            }
         }
 
         .card {
@@ -418,10 +457,10 @@
             <h3>How to Use Your Balance Wheel</h3>
             
             <p><strong>Step 1: Name Your Wheel</strong></p>
-            <p>In the "Wheel Name" field, enter the focus area you want to assess ie. Health.</p>
+            <p>In the "Wheel Name" field, enter the focus area you want to assess i.e. Health.</p>
             
             <p><strong>Step 2: Define Your Categories</strong></p>
-            <p>Fill in the 8 category fields with specific subcategories related to your focus areas i.e. hydration, mental health, etc.</p>
+            <p>Fill in the 8 category fields with specific subcategories related to your focus areas i.e. Hydration, Mental Health, etc.</p>
             
             <p><strong>Step 3: Rate Each Category (1-10 Scale)</strong></p>
             <ul>
@@ -623,10 +662,10 @@
                     maintainAspectRatio: false,
                     layout: {
                         padding: {
-                            top: 40,
-                            right: 40,
-                            bottom: 40,
-                            left: 40
+                            top: window.innerWidth < 768 ? 20 : 40,
+                            right: window.innerWidth < 768 ? 20 : 40,
+                            bottom: window.innerWidth < 768 ? 20 : 40,
+                            left: window.innerWidth < 768 ? 20 : 40
                         }
                     },
                     scales: {
@@ -640,7 +679,7 @@
                                 color: '#7f8c8d',
                                 backdropColor: 'transparent',
                                 font: {
-                                    size: 11
+                                    size: window.innerWidth < 768 ? 10 : 11
                                 }
                             },
                             grid: {
@@ -655,11 +694,11 @@
                             pointLabels: {
                                 color: '#2c3e50',
                                 font: {
-                                    size: 14,
+                                    size: window.innerWidth < 768 ? 12 : 14,
                                     weight: 'bold',
                                     family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
                                 },
-                                padding: 15,
+                                padding: window.innerWidth < 768 ? 10 : 15,
                                 centerPointLabels: false
                             }
                         }
