@@ -19,11 +19,13 @@
             color: #2c3e50;
             min-height: 100vh;
             padding: 20px;
+            margin: 0;
         }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
+            padding: 0;
         }
 
         header {
@@ -130,9 +132,20 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
             .container {
                 width: 100%;
-                padding: 0;
+                padding: 10px !important;
+                box-sizing: border-box;
+            }
+
+            header {
+                padding: 20px 0 !important;
+                margin-bottom: 20px;
             }
 
             .chart-container {
@@ -162,10 +175,6 @@
 
             h1 {
                 font-size: 2em;
-            }
-
-            body {
-                padding: 10px;
             }
         }
 
@@ -483,8 +492,14 @@
                 border-radius: 0;
                 margin-left: -10px;
                 margin-right: -10px;
-                width: 100vw;
+                width: calc(100% + 20px);
                 padding: 30px 20px;
+            }
+
+            .back-to-top {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
             }
         }
 
